@@ -16,8 +16,8 @@ from PIL import Image
 import cv2
 
 # settings for LBP
-radius = 1  # LBP算法中范围半径的取值
-n_points = 8 * radius # 领域像素点数
+radius = 1  # LBP算法中範圍半徑的取值
+n_points = 8 * radius # 領域像素點數
 
 # 讀取圖像
 image = cv2.imread('road4.jpeg')
@@ -33,7 +33,7 @@ lbp = local_binary_pattern(image, n_points, radius)
 plt.subplot(111)
 plt.imshow(lbp, plt.cm.gray)
 
-#特徵提取
+#特徵邊緣提取
 edges = filters.sobel(image)
 plt.subplot(111)
 plt.imshow(edges, plt.cm.gray)
